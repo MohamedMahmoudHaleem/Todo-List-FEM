@@ -27,7 +27,10 @@ function App() {
     }
   }, [darkMode]);
   return (
-    <div className="font-JosefinSans bg-neutral-light-veryLightGray min-h-screen relative">
+    <div
+      className={`font-JosefinSans min-h-screen relative bg-neutral-light-veryLightGray 
+   ${darkMode && "bg-neutral-dark-veryDarkBlue"} `}
+    >
       <div
         className={` w-full h-80 bg-no-repeat bg-cover ${
           darkMode
