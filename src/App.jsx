@@ -27,9 +27,9 @@ function App() {
     }
   }, [darkMode]);
   return (
-    <div className="font-JosefinSans bg-neutral-light-veryLightGrayishBlue min-h-screen relative">
+    <div className="font-JosefinSans bg-neutral-light-veryLightGray min-h-screen relative">
       <div
-        className={`absolute top-0 left-0 w-full h-72 bg-no-repeat bg-cover ${
+        className={` w-full h-80 bg-no-repeat bg-cover ${
           darkMode
             ? "bg-dark-mode-bg md:bg-dark-mode-bg-desktop"
             : "bg-light-mode-bg md:bg-light-mode-bg-desktop"
@@ -37,17 +37,19 @@ function App() {
       ></div>
       <MyToDoContext.Provider
         value={{
-          toggle: darkMode,
-          setToggle: setDarkMode,
+          darkMode,
+          setDarkMode,
           IconCheck,
           IconCross,
           IconMoon,
           IconSun,
         }}
       >
-        <Header />
-        <NewTodo />
-        <ToDoList />
+        <div className="fixed top-20 left-1/2 transform -translate-x-1/2 -translate-y-1/2">
+          <Header />
+          <NewTodo />
+          <ToDoList />
+        </div>
       </MyToDoContext.Provider>
     </div>
   );
