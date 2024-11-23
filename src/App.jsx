@@ -29,7 +29,7 @@ function App() {
   return (
     <div
       className={`font-JosefinSans min-h-screen relative bg-neutral-light-veryLightGray 
-   ${darkMode && "bg-neutral-dark-veryDarkBlue"} `}
+   ${darkMode && "dark:bg-neutral-dark-veryDarkBlue"} `}
     >
       <div
         className={` w-full h-80 bg-no-repeat bg-cover ${
