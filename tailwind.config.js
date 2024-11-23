@@ -6,11 +6,17 @@ export default {
       fontFamily: {
         JosefinSans: ["Josefin Sans", "sans-serif"],
       },
+      backgroundImage: {
+        "light-mode-bg": "url('./assets/images/bg-mobile-light.jpg')",
+        "light-mode-bg-desktop": "url('./assets/images/bg-desktop-light.jpg')",
+        "dark-mode-bg": "url('./assets/images/bg-mobile-dark.jpg')",
+        "dark-mode-bg-desktop": "url('./assets/images/bg-desktop-dark.jpg')",
+      },
       colors: {
         primary: {
           brightBlue: "hsl(220, 98%, 61%)",
           checkBackground:
-          "linear-gradient(hsl(192, 100%, 67%), hsl(280, 87%, 65%))",
+            "linear-gradient(hsl(192, 100%, 67%), hsl(280, 87%, 65%))",
         },
         neutral: {
           // Light theme colors
