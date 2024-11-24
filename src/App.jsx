@@ -14,9 +14,17 @@ import IconSun from "./assets/images/icon-sun.svg";
 
 function App() {
   //conditional state if the theme is dark return true .
-  const [darkMode, setDarkMode] = useState(
-    () => localStorage.getItem("theme") === "dark"
-  );
+  // const [darkMode, setDarkMode] = useState(
+  //   () => localStorage.getItem("theme") === "dark"
+  // );
+  const [darkMode, setDarkMode] = useState(() => {
+    // Get the initial theme from localStorage or system preference
+    return localStorage.getItem("theme") === "dark" ||
+      (!localStorage.getItem("theme") &&
+        window.matchMedia("(prefers-color-scheme: dark)").matches)
+      ? true
+      : false;
+  });
   useEffect(() => {
     if (darkMode) {
       document.documentElement.classList.add("dark");
@@ -28,11 +36,13 @@ function App() {
   }, [darkMode]);
   return (
     <div
+      // className={`font-JosefinSans min-h-screen relative bg-neutral-light-veryLightGray
+      //    ${darkMode && "dark:bg-neutral-dark-veryDarkBlue"} `}
       className={`font-JosefinSans min-h-screen relative bg-neutral-light-veryLightGray 
-   ${darkMode && "dark:bg-neutral-dark-veryDarkBlue"} `}
+          dark:bg-neutral-dark-veryDarkBlue `}
     >
       <div
-        className={` w-full h-80 bg-no-repeat bg-cover ${
+        className={` w-full h-80 bg-no-repeat bg-cover absolute top-0 left-0${
           darkMode
             ? "bg-dark-mode-bg md:bg-dark-mode-bg-desktop"
             : "bg-light-mode-bg md:bg-light-mode-bg-desktop"
@@ -48,7 +58,7 @@ function App() {
           IconSun,
         }}
       >
-        <div className="fixed top-20 left-1/2 transform -translate-x-1/2 -translate-y-1/2">
+        <div className="relative mx-auto pt-20  max-w-screen-[300px] md:max-w-screen-sm ">
           <Header />
           <NewTodo />
           <ToDoList />
