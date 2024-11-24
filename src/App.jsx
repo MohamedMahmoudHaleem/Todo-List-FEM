@@ -43,12 +43,15 @@ function App() {
           dark:bg-neutral-dark-veryDarkBlue `}
     >
       <div
+        className={` w-full h-80 bg-no-repeat bg-cover absolute top-0 left-0 transition-all delay-150 bg-light-mode-bg md:bg-light-mode-bg-desktop dark:bg-dark-mode-bg dark:md:bg-dark-mode-bg-desktop`}
+      ></div>
+      {/* <div
         className={` w-full h-80 bg-no-repeat bg-cover absolute top-0 left-0 transition-all delay-150 ${
           darkMode
             ? "bg-dark-mode-bg md:bg-dark-mode-bg-desktop"
             : "bg-light-mode-bg md:bg-light-mode-bg-desktop"
         }`}
-      ></div>
+      ></div> */}
       <MyToDoContext.Provider
         value={{
           darkMode,
