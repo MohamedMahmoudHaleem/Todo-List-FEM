@@ -12,18 +12,19 @@ function Header() {
         className="flex  justify-between items-center 
     "
       >
-        <h1 className="text-neutral-light-veryLightGray text-5xl tracking-[10px] ">
+        <h1 className="uppercase text-neutral-light-veryLightGray font-semibold
+         text-5xl tracking-[14px] ">
           {" "}
           Todo
         </h1>
         <div>
           <button onClick={() => setDarkMode(!darkMode)}>
-            <img src={darkMode ? IconSun : IconMoon} alt="icon" />
+            <img src={darkMode ? IconSun : IconMoon} alt="icon" className='w-7'  />
           </button>
         </div>
       </div>
       <div className="mt-10">
-        <label htmlFor="text">
+        <label htmlFor="text" id>
           <input type="checkbox" name="" id="" />
           <input type="text" name="" id="" />
         </label>

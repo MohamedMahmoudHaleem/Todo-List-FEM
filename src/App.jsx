@@ -62,7 +62,7 @@ function App() {
           IconSun,
         }}
       >
-        <div className="relative mx-auto pt-20  max-w-screen-[300px] md:max-w-screen-sm ">
+        <div className="continer relative mx-auto  pt-20  max-w-screen-[300px] md:max-w-screen-sm ">
           <Header />
           <NewTodo />
           <ToDoList />
