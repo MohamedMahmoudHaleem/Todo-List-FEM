@@ -17,7 +17,7 @@ export default {
         primary: {
           brightBlue: "hsl(220, 98%, 61%)",
           checkBackground:
-            "linear-gradient(hsl(192, 100%, 67%), hsl(280, 87%, 65%))",
+            "linear-gradient(to left,hsl(192, 100%, 67%), hsl(280, 87%, 65%))",
         },
         neutral: {
           // Light theme colors
