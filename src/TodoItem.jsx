@@ -13,7 +13,7 @@ function TodoItem({ index, todo }) {
 
   return (
     <li
-      className={`bg-neutral-light-veryLightGray rounded-md w-full h-10 outline-none p-7 flex flex-row justify-between items-center
+      className={`text-lg bg-neutral-light-veryLightGray rounded-md rounded-b-none w-full h-10 outline-none p-7 flex flex-row justify-between items-center
       `}
     >
       <div className="flex gap-6 items-center  text-neutral-light-veryDarkGrayishBlue ">

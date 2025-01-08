@@ -39,11 +39,11 @@ function App() {
       // className={`font-JosefinSans min-h-screen relative bg-neutral-light-veryLightGray
       //    ${darkMode && "dark:bg-neutral-dark-veryDarkBlue"} `}
       className={`font-JosefinSans min-h-screen relative 
-        transition-all delay-150 bg-neutral-light-lightGrayishBlue 
+        transition-all duration-150 bg-neutral-light-lightGrayishBlue 
           dark:bg-neutral-dark-veryDarkBlue `}
     >
       <div
-        className={` w-full h-80 bg-no-repeat bg-cover absolute top-0 left-0 transition-all delay-150 bg-light-mode-bg md:bg-light-mode-bg-desktop dark:bg-dark-mode-bg dark:md:bg-dark-mode-bg-desktop`}
+        className={` w-full h-80 bg-no-repeat bg-cover absolute top-0 left-0 transition-all duration-150 bg-light-mode-bg md:bg-light-mode-bg-desktop dark:bg-dark-mode-bg dark:md:bg-dark-mode-bg-desktop`}
       ></div>
       {/* <div
         className={` w-full h-80 bg-no-repeat bg-cover absolute top-0 left-0 transition-all delay-150 ${

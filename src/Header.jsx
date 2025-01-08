@@ -37,7 +37,7 @@ function Header() {
           </button>
         </div>
       </div>
-      <div className="mt-10 mb-2">
+      <div className="mt-10 mb-6">
         <label htmlFor="text" className="relative">
           <input
             onClick={() => handleAddTodo}
