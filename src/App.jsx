@@ -1,6 +1,5 @@
 import { useEffect, useState } from "react";
 import Header from "./Header.jsx";
-import NewTodo from "./NewTodo.jsx";
 import ToDoList from "./ToDoList.jsx";
 import { MyToDoContext } from "./MyToDoContext.jsx";
 // import BgDesktopLight from './assets/images/bg-desktop-light.jpg'
@@ -17,6 +16,7 @@ function App() {
   // const [darkMode, setDarkMode] = useState(
   //   () => localStorage.getItem("theme") === "dark"
   // );
+  const [todos, setTodos] = useState([]);
   const [darkMode, setDarkMode] = useState(() => {
     // Get the initial theme from localStorage or system preference
     return localStorage.getItem("theme") === "dark" ||
@@ -39,7 +39,7 @@ function App() {
       // className={`font-JosefinSans min-h-screen relative bg-neutral-light-veryLightGray
       //    ${darkMode && "dark:bg-neutral-dark-veryDarkBlue"} `}
       className={`font-JosefinSans min-h-screen relative 
-        transition-all delay-150 bg-neutral-light-veryLightGray 
+        transition-all delay-150 bg-neutral-light-lightGrayishBlue 
           dark:bg-neutral-dark-veryDarkBlue `}
     >
       <div
@@ -60,11 +60,12 @@ function App() {
           IconCross,
           IconMoon,
           IconSun,
+          todos,
+          setTodos,
         }}
       >
-        <div className="continer relative mx-auto  pt-20  max-w-screen-[300px] md:max-w-screen-sm ">
+        <div className="container relative mx-auto  pt-20  max-w-screen-[300px] md:max-w-screen-sm ">
           <Header />
-          <NewTodo />
           <ToDoList />
         </div>
       </MyToDoContext.Provider>
